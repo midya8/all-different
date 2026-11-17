@@ -1,6 +1,6 @@
 # Local is not joint: overlapping all-different scopes
 
-[Live overlapping inspector](https://midya8.github.io/halllab/overlaps.html). [Original method and six-source ledger](METHOD.md) remain unchanged. New native API `halllab.overlap.overlaps(data)` and `verify_overlaps(report)`; separate module CLI `python -m halllab.overlap input.json --output report.json`, then `python -m halllab.overlap report.json --verify`. Base single-constraint v1 API/report/tests are preserved byte-for-byte.
+[Live overlapping inspector](https://midya8.github.io/all-different/overlaps.html). [Original method and six-source ledger](METHOD.md) remain unchanged. New native API `halllab.overlap.overlaps(data)` and `verify_overlaps(report)`; separate module CLI `python -m halllab.overlap input.json --output report.json`, then `python -m halllab.overlap report.json --verify`. Base single-constraint v1 API/report/tests are preserved byte-for-byte.
 
 ## Contract
 
