@@ -1,6 +1,6 @@
 # Every conflict, every minimal removal
 
-[Live conflict inspector](https://midya8.github.io/halllab/conflicts.html). [Previous overlap contract](OVERLAPS.md) and [original all-different method](METHOD.md) remain in place.
+[Live conflict inspector](https://midya8.github.io/all-different/conflicts.html). [Previous overlap contract](OVERLAPS.md) and [original all-different method](METHOD.md) remain in place.
 
 ## Fixed background, removable foreground
 
