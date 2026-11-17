@@ -1,6 +1,6 @@
-# HallLab
+# All different
 
-HallLab computes exact all-different support for supplied tiny variable domains. Every retained variable/value pair belongs to a complete injective assignment. Every pruned pair has a forced-residual Hall obstruction. The comparison uses full synchronous pairwise arc consistency, not a one-pass baseline.
+All different computes exact all-different support for supplied tiny variable domains. Every retained variable/value pair belongs to a complete injective assignment. Every pruned pair has a forced-residual Hall obstruction. The comparison uses full synchronous pairwise arc consistency, not a one-pass baseline.
 
 Four separate workflows answer different questions:
 
@@ -9,7 +9,7 @@ Four separate workflows answer different questions:
 - [Conflicts and removals](CONFLICTS.md): which minimal sets of scopes conflict, and which removals repair the network?
 - [Alternating support](ALTERNATING.md): how do matching cycles and paths from spare values retain edges?
 
-[Interactive inspector](https://midya8.github.io/halllab/) · [Exact method, boundaries and six-source ledger](METHOD.md)
+[Interactive inspector](https://midya8.github.io/all-different/) · [Exact method, boundaries and six-source ledger](METHOD.md)
 
 ```json
 {"values":3,"domains":[[0,1],[0,1],[0,1,2]]}
@@ -54,13 +54,13 @@ At most six variables/eight values; one all-different relation, not a complete c
 
 ## Overlapping scopes: local is not joint
 
-[Separate interactive scope-network inspector](https://midya8.github.io/halllab/overlaps.html) · [Exact overlap contract](OVERLAPS.md)
+[Separate interactive scope-network inspector](https://midya8.github.io/all-different/overlaps.html) · [Exact overlap contract](OVERLAPS.md)
 
 Every scope gets its own complete local report in every synchronous propagation round, then retained domains are intersected until fixed point. An independent full-assignment oracle checks the common relation. Inspect the locally viable but impossible two-color triangle, or a satisfiable triangle where local scopes still miss joint pruning. Every scope-only witness is mapped back to original variables, never presented as a joint solution. New API `halllab.overlap.overlaps` / `verify_overlaps` and `python -m halllab.overlap`; original v1 reports and test sources stay unchanged. The first two report families had twenty native tests and six Node/Chrome tests; these remain in the current suite. Tiny exact enumeration, not a production multi-constraint solver.
 
 ## Every conflict, every minimal removal
 
-[Conflict and removal inspector](https://midya8.github.io/halllab/conflicts.html) · [Exact contract and seven-source ledger](CONFLICTS.md)
+[Conflict and removal inspector](https://midya8.github.io/all-different/conflicts.html) · [Exact contract and seven-source ledger](CONFLICTS.md)
 
 The overlapping network can now explain every inclusion-minimal conflicting scope set and every inclusion-minimal removal that repairs the whole network. Each conflict has full single-deletion witnesses; each removal has a common assignment and contained-conflict witnesses for every restoration. Inspect all active-scope subsets and hitting-set intersections. Minimal is not minimum: the default diamond has one size-one and four size-two minimal removals. Domains stay fixed; an empty-domain background cannot be repaired by scope removal.
 
@@ -68,7 +68,7 @@ Separate `halllab.conflicts` API/checker/module CLI. Both earlier report familie
 
 ## A spare value is not a cycle
 
-[Alternating support inspector](https://midya8.github.io/halllab/alternating.html) · [Exact fourth report contract and eight-source ledger](ALTERNATING.md)
+[Alternating support inspector](https://midya8.github.io/all-different/alternating.html) · [Exact fourth report contract and eight-source ledger](ALTERNATING.md)
 
 One variable with two values has three singleton alternating SCCs, yet both edges are supported: the spare value starts an even alternating path. Inspect the canonical maximum matching, every directed original edge, free-value BFS layers, SCC cycles, dummy-node equivalent classes and every explicit cycle/path flip into a complete assignment. Rejected edges retain forced-residual Hall obstructions. A maximum partial matching in an impossible graph never masquerades as support.
 
